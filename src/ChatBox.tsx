@@ -239,7 +239,7 @@ const ChatBox: FC<{
   }, [messages]);
 
   return (
-    <main className="max-w-[640px] mx-auto relative h-full sm:bg-gray-700 max-h-[80%] mt-16 sm:rounded-2xl sm:overflow-hidden">
+    <main className="max-w-[640px] mx-auto relative h-full sm:bg-gray-700 sm:max-h-[80%] sm:mt-16 sm:rounded-2xl sm:overflow-hidden">
       <header className="bg-gray-800 p-4 flex items-center">
         <figure className="w-12 h-12 bg-yellow-400 rounded-full overflow-hidden">
           <img
