@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-image: url("/bg.jpg");
+  font-family: "Roboto", sans-serif;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  scrollbar-width: 0;
+}
+
+@keyframes swipeUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.animate-zoom {
+  animation-name: zoom;
+  animation-duration: 2000ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.animate-fadeInOut {
+  animation-name: fadeInOut;
+  animation-duration: 2000ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.animate-fade {
+  animation-name: fade;
+  animation-duration: 1000ms;
+  animation-iteration-count: 1;
+}
+
+.animate-swipeUp {
+  animation-name: swipeUp;
+  animation-duration: 200ms;
+  animation-iteration-count: 1;
+}
